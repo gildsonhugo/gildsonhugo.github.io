@@ -37,6 +37,12 @@ body{
 
 /*HEADER*/
 
+header{
+    position: relative;
+    overflow-x: hidden;
+    height: 120vh;
+}
+
 .navbar > a img{
     height: 70px;
 }
@@ -48,9 +54,9 @@ body{
 
 #bg-image-header{
     position: absolute;
-    top: 0;
+    top: -40px;
     left: 0;
-    height: 120%;
+    height: 100%;
     width: auto !important;
 }
 
@@ -171,7 +177,7 @@ header .container{
 }
 
 #contact .container p{
-    width: 400px;
+    width: 320px;
     text-align: center;
 }
 
@@ -224,10 +230,6 @@ footer p{
 
     .image-about, .text-about {
         width: 100%;
-    }
-
-    #bg-image-header{
-        height: 100%;
     }
 
     footer .container{
