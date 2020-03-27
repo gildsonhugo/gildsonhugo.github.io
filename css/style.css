@@ -48,8 +48,51 @@ header{
 }
 
 #mobile{
+    width: 50px;
+    overflow: hidden;
+    padding: 10px;
+    height: 50px;
     cursor: pointer;
+    background: #fff;
+    border-radius: 50%;
     display: none;
+}
+
+#mobile.open .outer.one{
+    transform: translateX(-50px);
+}
+
+#mobile.open .outer.two{
+    transform: translateX(50px);
+}
+
+#mobile.open .x .one{
+    transform: rotate(45deg);
+}
+
+#mobile.open .x .two{
+    transform: rotate(-45deg);
+}
+
+.x{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+}
+
+.x .bar{
+    position: absolute;
+}
+
+.bar{
+    width: 90%;
+    height: 4px;
+    border-radius: 2px;
+    background: #1a1a1a;
+    transition: all 300ms;
 }
 
 #bg-image-header{
@@ -253,7 +296,10 @@ footer p{
 
     #mobile{
         width: 50px;
-        display: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
     }
 
     .navbar{
