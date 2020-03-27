@@ -1,0 +1,284 @@
+/*CSS RESET*/
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/*BODY*/
+
+.container{
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 40px auto;
+    transition: all 300ms;
+}
+
+body{
+    overflow-x: hidden;
+    width: 100vw;
+    background: url('../img/big-logo.png') no-repeat;
+    background-position:  top 120px right;
+}
+
+.section-title{
+    font-size: 40pt;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+/*HEADER*/
+
+.navbar > a img{
+    height: 70px;
+}
+
+#mobile{
+    cursor: pointer;
+    display: none;
+}
+
+#bg-image-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 120%;
+    width: auto !important;
+}
+
+.actual{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul li{
+    display: inline-block;
+}
+
+.navbar ul li + li{
+    margin-left: 15px;
+}
+
+.navbar ul li a{
+    color: #1a1a1a;
+    font-size: 14pt;
+    position: relative;
+}
+
+.navbar ul li a.link::before{
+    position: absolute;
+    content: "";
+    width: 0;
+    top: 100%;
+    height: 1px;
+    background: #1a1a1a;
+    transition: all 300ms;
+}
+
+.navbar ul li a.link:hover{
+    font-weight: 500;
+}
+
+.navbar ul li a.link:hover::before{
+    width: 100%;
+}
+
+header .container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-header{
+    flex: 0.9;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-header h1{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.content-header h1, .content-header h2{
+    font-size: 38pt;
+}
+
+.content-header h2, .content-header h4{
+    font-weight: 300 !important;
+}
+
+.content-header h4{
+    font-size: 16pt;
+}
+
+/*ABOUT*/
+
+#about .container{
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-about{
+    width: 40%;
+}
+
+.text-about p, #contact .container p{
+    color: #525151;
+    margin: 15px 0;
+}
+
+.image-about{
+    width: 50%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.image-about img{
+    position: absolute;
+    width: 100%;
+}
+
+/*CONTACT*/
+
+#contact .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact .container p{
+    width: 400px;
+    text-align: center;
+}
+
+/*FOOTER*/
+
+footer{
+    padding-bottom: 20px;
+}
+
+footer .container > img{
+    width: 174px;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer .container ul li{
+    display: inline-block;
+}
+
+footer .container ul li + li{
+    margin-left: 10px;
+}
+
+footer p{
+    text-align: center;
+}
+
+@media(min-width: 1441px){
+    .container{
+        width: 1320px;
+    }
+}
+
+@media(max-width: 1440px){
+
+    .container{
+        width: 80%;
+    }
+
+}
+
+@media(max-width: 767px){
+    #about .container{
+        flex-direction: column;
+    }
+
+    .image-about, .text-about {
+        width: 100%;
+    }
+
+    #bg-image-header{
+        height: 100%;
+    }
+
+    footer .container{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    footer .container img{
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 1366px){
+
+    #mobile{
+        width: 50px;
+        display: unset;
+    }
+
+    .navbar{
+        position: relative;
+    }
+
+    .navbar ul{
+        right: 0;
+        height: 0;
+        padding: 0px;
+        overflow: hidden;
+        top: 100%;
+        background: #fff;
+        position: absolute;
+        transition: all 300ms;
+    }
+
+    .navbar ul.open{
+        height: auto;
+        padding: 15px;
+    }
+
+    .navbar ul li{
+        margin: 0;
+        display: block;
+        text-align: right;
+    }
+
+    .navbar ul li a{
+        font-size: 18pt;
+    }
+
+    .navbar ul li + li{
+        margin-top: 15px !important;
+        margin-left: 0;
+    }
+}
