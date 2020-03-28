@@ -188,7 +188,7 @@ header .container{
 }
 
 .text-about{
-    width: 40%;
+    width: 50%;
 }
 
 .text-about p, #contact .container p{
@@ -201,18 +201,18 @@ header .container{
     height: 500px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     position: relative;
 }
 
-.image-about img{
+.image-about > img{
     position: absolute;
     width: 70%;
+    transform: translateX(-7%);
 }
 
 .image-about .avatar{
     width: 80%;
-    position: relative;
     z-index: 1;
     filter: grayscale(1) contrast(1.1);
     display: block;
@@ -299,6 +299,14 @@ footer p{
 @media(max-width: 767px){
     #about .container{
         flex-direction: column;
+    }
+
+    .image-about{
+        justify-content: center;
+    }
+
+    .image-about > img{
+        transform: translateX(0);
     }
 
     .image-about, .text-about {
